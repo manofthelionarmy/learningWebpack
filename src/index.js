@@ -1,1 +1,3 @@
-alert('Hello Webpack World!')
+import {sayHello} from "./greetings"
+
+sayHello()
