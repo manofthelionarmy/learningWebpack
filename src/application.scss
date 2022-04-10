@@ -1,0 +1,5 @@
+$picture: url('nature_fox.jpg');
+body {
+  background-image: $picture;
+  background-size: cover;
+}

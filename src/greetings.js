@@ -1,3 +1,7 @@
-export const sayHello = ()  => {
-  alert("Hello, webpack is watching")
+function sayHello() {
+  let tool = 'webpack';
+  console.log(`Hello, I am ${tool}`)
 }
+
+export {sayHello}
+
