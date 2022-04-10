@@ -21,6 +21,12 @@ module.exports = {
     filename: "[name]-[contenthash].js",
     path: path.resolve(__dirname, "build")
   },
+  devServer: {
+    port: 9000,
+    static: {
+      directory: path.resolve(__dirname, 'build')
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/template.html'
