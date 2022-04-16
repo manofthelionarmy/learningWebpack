@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
+<!-- No longer need this after ch 4. HtmlWebpackPlugin autocreates an 
+index.html and injects our hashed filenames and uses a tempalte
+  -->
   <head>
     <title></title>
+    <!--- NOTE:
+          How does webpack handle loading css? 
+          How about when we have multiple entries?
+    --->
     <link rel="stylesheet" href="build/application.css">
   </head>
   <body>
     <script type="text/javascript" src="build/application.js"></script>
+    <!--- NOTE:
+      Why do I see the this error after I import this js file?
+        Conflict: Multiple chunks emit assets to the same filename
+    --->
+    <script type="text/javascript" src="build/admin.js"></script>
   </body>
 </html>

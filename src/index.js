@@ -1,5 +1,5 @@
 import {sayHello} from "./greetings";
-import {lib} from './lib.css';
+// NOTE: how does import css into js work and how does webpack handle this?
 import application from "./application.scss";
 
 sayHello()

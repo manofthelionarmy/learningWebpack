@@ -26,17 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _greetings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greetings */ \"./src/greetings.js\");\n/* harmony import */ var _lib_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib.css */ \"./src/lib.css\");\n/* harmony import */ var _application_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./application.scss */ \"./src/application.scss\");\n\n\n\n(0,_greetings__WEBPACK_IMPORTED_MODULE_0__.sayHello)();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7OztBQUFBO0FBQ0E7QUFDQTtBQUVBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbGVhcm53ZWJwYWNrLy4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtzYXlIZWxsb30gZnJvbSBcIi4vZ3JlZXRpbmdzXCI7XG5pbXBvcnQge2xpYn0gZnJvbSAnLi9saWIuY3NzJztcbmltcG9ydCBhcHBsaWNhdGlvbiBmcm9tIFwiLi9hcHBsaWNhdGlvbi5zY3NzXCI7XG5cbnNheUhlbGxvKClcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
-
-/***/ }),
-
-/***/ "./src/lib.css":
-/*!*********************!*\
-  !*** ./src/lib.css ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvbGliLmNzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9sZWFybndlYnBhY2svLi9zcmMvbGliLmNzcz9mZDY5Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/lib.css\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _greetings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greetings */ \"./src/greetings.js\");\n/* harmony import */ var _application_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./application.scss */ \"./src/application.scss\");\n // NOTE: how does import css into js work and how does webpack handle this?\n\n\n(0,_greetings__WEBPACK_IMPORTED_MODULE_0__.sayHello)();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7O0FBRUE7QUFFQSIsInNvdXJjZXMiOlsid2VicGFjazovL2xlYXJud2VicGFjay8uL3NyYy9pbmRleC5qcz9iNjM1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7c2F5SGVsbG99IGZyb20gXCIuL2dyZWV0aW5nc1wiO1xuLy8gTk9URTogaG93IGRvZXMgaW1wb3J0IGNzcyBpbnRvIGpzIHdvcmsgYW5kIGhvdyBkb2VzIHdlYnBhY2sgaGFuZGxlIHRoaXM/XG5pbXBvcnQgYXBwbGljYXRpb24gZnJvbSBcIi4vYXBwbGljYXRpb24uc2Nzc1wiO1xuXG5zYXlIZWxsbygpXG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
