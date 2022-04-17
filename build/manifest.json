@@ -1,8 +1,9 @@
 {
-  "application.css": "auto/application-2dda1ad6d2b5ae810e5a.css",
-  "application.js": "auto/application-2551e633a7375c6c86bc.js",
+  "application.css": "auto/application-a9fa967f206353884e38.css",
+  "application.js": "auto/application-921e907d9ed4cd73d47d.js",
   "admin.css": "auto/admin-09bed75d2a7860c20b34.css",
-  "admin.js": "auto/admin-02c21a5a53afcd49f553.js",
+  "admin.js": "auto/admin-4d7f04abc6fa8f03ac69.js",
+  "runtime.js": "auto/runtime-ec2e1dba93e4c78a58e2.js",
   "nature_fox.jpg": "auto/nature_fox.53261de.jpg",
   "index.html": "auto/index.html"
 }

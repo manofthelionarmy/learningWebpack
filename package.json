@@ -4,7 +4,9 @@
   "description": "This is me learning webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-cli",
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",

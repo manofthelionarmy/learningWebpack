@@ -2,4 +2,15 @@ $picture: url('nature_fox.jpg');
 body {
   background-image: $picture;
   background-size: cover;
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  opacity: 0.8;
+  background-color: black;
 }

@@ -7,25 +7,52 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Book say this is already inlcuded via webpack
 const TerserJSPlugin = require('terser-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const mode = "development";
 
 module.exports = {
-  watch: true,
-  mode: "development",
+  // watch: true,
+  mode: mode,
   devtool: "eval-cheap-module-source-map",
   // NOTE: Review, what does entry do?
   entry: {
     application: "./src/index.js",
-    admin: "./src/admin"
+    admin: "./src/admin.js"
   },
   output: {
     filename: "[name]-[contenthash].js",
     path: path.resolve(__dirname, "build")
   },
+  // target: "web",
   devServer: {
+    client: {
+      overlay: true,
+    },
+    hot: true,
     port: 9000,
+    // Webpack Dev server serves static files from memory. If a resource
+    // is not found in memory, it will load from the file system at this directory
+    // What does 'Content not from webpack served from .../build' mean?
+    // Why does this work if I set the directory to a non-existent folder?
+    // Contentbase was renamed to static in webpack 5
+    // The point of static is to server static files, but what is it's relationship
+    // to output.publicPath?
+    //
+    // Content not from webpack is served from '/home/armando/Desktop/workspace/learnWebpack/build' directory
+    // Literally means: "Hey, in the event you look in a url path not where the webpack bundles are served from in memory, which
+    // is the location specified in output.publicPath, we'll fall back to this fileServer that serves from this directory."
+    // This file server's url location is the static.publicPath.
+    // TLDR: This is a fall back if devServer.static.publicPath and output.publicPath don't match
+    //       If they do match, output.publicPath takes precedence and we're serving from memory
     static: {
-      directory: path.resolve(__dirname, 'build')
-    }
+      // directory tells the server where to server the content from
+      directory: path.resolve(__dirname, 'build'),
+      // publicPath tells the server at which url to serve static.directory
+      // publicPath: '/assests/'
+    },
+    // Interesting, when I set this to false, I don't see the error 
+    // 'Content not from webpack served from .../build' 🤔
+    // static: false,
+    devMiddleware: {writeToDisk : true}
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -62,7 +89,12 @@ module.exports = {
         // injects css into html <- loads css into js
         use: [
           // By using this plugin, we can extract the css after everything is loaded
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // hmr: true, deprecated, webpack 5 automatically supports HMR
+            }
+          },
           {loader: 'css-loader', options: { importLoaders: 1 }},
           {
             loader: 'postcss-loader',
@@ -84,7 +116,12 @@ module.exports = {
         // LIFO, order matters. 
         // Acts like a pipeline takes imported css and injects into index.html <- css-loader loads into js <- sass-loader prcoesses css
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // hmr: true, deprecated, webpack 5 automatically supports HMR
+            }
+          },
           {loader: 'css-loader', options: { importLoaders: 1 }},
           {
             loader: 'postcss-loader',
@@ -121,6 +158,12 @@ module.exports = {
     minimizer: [
       new TerserJSPlugin({}),
       new CSSMinimizerPlugin({}),
-    ]
-  }
+    ],
+    // Why does this work?
+    // https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/88
+    // I don't get why it would instantiate twice if I have two entries
+    // I need to fundamentally understand how entries work and how modules
+    // are bundled for them
+    runtimeChunk: 'single'
+  },
 }
