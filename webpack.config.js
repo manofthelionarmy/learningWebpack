@@ -15,12 +15,17 @@ module.exports = {
   devtool: "eval-cheap-module-source-map",
   // NOTE: Review, what does entry do?
   entry: {
-    application: "./src/index.js",
-    admin: "./src/admin.js"
+    application: "./src/javascripts/index.js",
+    admin: "./src/javascripts/admin.js"
   },
   output: {
     filename: "[name]-[contenthash].js",
     path: path.resolve(__dirname, "build")
+  },
+  resolve: {
+    alias: {
+      CssFolder: path.resolve(__dirname, 'src/stylesheets/')
+    }
   },
   // target: "web",
   devServer: {
